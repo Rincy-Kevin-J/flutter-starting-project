@@ -136,7 +136,7 @@ class _LoginsignState extends State<Loginsign> {
               RichText(
                 text: TextSpan(
                   text: "Don't have an account?",
-                  style: const TextStyle(
+                  style:  TextStyle(
                       fontWeight: FontWeight.bold, color: Colors.black),
                   children: [
                     TextSpan(
