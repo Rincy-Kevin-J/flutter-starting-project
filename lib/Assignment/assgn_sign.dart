@@ -25,7 +25,7 @@ class _signUpPageState extends State<Signupassign> {
               SizedBox(
                 height: MediaQuery.of(context).size.height * .08,
               ),
-              const Center(
+               Center(
                 child: Text(
                   'Register',
                   style: TextStyle(fontSize: 40, fontWeight: FontWeight.bold),

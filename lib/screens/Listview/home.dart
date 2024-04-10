@@ -73,7 +73,7 @@ class Homepage extends StatelessWidget {
       //   ],
       // ),
       body: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding:  EdgeInsets.all(12.0),
         child: ListView(
           children: List.generate(
               users.length,
