@@ -41,6 +41,7 @@ class ListView_seperated extends StatelessWidget {
       appBar: AppBar(
         title: Text("List View 3"),
         actions: [
+
           CircleAvatar(
             backgroundColor: Colors.blue[300],
             child: Icon(Icons.add),
