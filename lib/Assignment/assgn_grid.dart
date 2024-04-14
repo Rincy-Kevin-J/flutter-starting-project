@@ -67,13 +67,16 @@ class AssgnGrid extends StatelessWidget {
                         fit: BoxFit.fitHeight,
                       ),
                       Positioned(
-                          bottom: 5,
-                          left: 10,
-                          child: Text("${places[index]["name"]}",
-                              style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 25)))
+                        bottom: 5,
+                        left: 10,
+                        child: Text(
+                          "${places[index]["name"]}",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25),
+                        ),
+                      )
                     ]),
                   ],
                 ),
