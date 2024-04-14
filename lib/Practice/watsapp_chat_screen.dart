@@ -82,7 +82,7 @@ class ChatScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("WhatsApp",
+          title: const Text("WhatsApp",
               textAlign: TextAlign.left,
               style: TextStyle(fontSize: 30, color: Colors.white)),
           actions: [
@@ -104,7 +104,7 @@ class ChatScreen extends StatelessWidget {
               itemBuilder: (context) {
                 return [
                   PopupMenuItem(child: Text("New group")),
-                  PopupMenuItem(child: Text("New broadcast")),
+                  const PopupMenuItem(child: Text("New broadcast")),
                   PopupMenuItem(child: Text("Linked device")),
                   PopupMenuItem(child: Text("Started Device")),
                   PopupMenuItem(child: Text("Payments")),

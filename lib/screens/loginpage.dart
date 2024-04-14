@@ -143,6 +143,7 @@
 //    }
 //  }
 
+import 'package:fltprojeect/Assignment/assgn_plant.dart';
 import 'package:fltprojeect/screens/Sign_up.dart';
 import 'package:fltprojeect/screens/Listview/home.dart';
 import 'package:fltprojeect/utils/mycolor.dart';
@@ -284,12 +285,13 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => Homepage()));
+                                  builder: (context) =>Homepage()));
                         } else {
                           // errorSnackbar(context);
 
                           ScaffoldMessenger.of(context)
                               .showSnackBar(SnackBar(content: Text("error")));
+
                         }
                         usercontroller.clear();
                         pwdcontroller.clear();
@@ -298,6 +300,7 @@ class _LoginPageState extends State<LoginPage> {
                       minWidth: 200,
                       shape: const StadiumBorder(),
                       child: const Text("Login"),
+
                     ),
                     RichText(
                         text: TextSpan(

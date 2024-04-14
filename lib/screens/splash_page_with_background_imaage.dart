@@ -1,20 +1,15 @@
 import 'dart:async';
 
-import 'package:fltprojeect/screens/Listview/listview%20using%20builder.dart';
-import 'package:fltprojeect/screens/Listview/listview2.dart';
-import 'package:fltprojeect/screens/Sign_up.dart';
-import 'package:fltprojeect/screens/atmcard.dart';
-import 'package:fltprojeect/screens/loginpage.dart';
-import 'package:fltprojeect/screens/stack.dart';
-import 'package:fltprojeect/screens/welcome.dart';
+import 'package:fltprojeect/screens/Slivers.dart';
+import 'package:fltprojeect/screens/gridview2.dart';
 import 'package:flutter/material.dart';
- import 'package:google_fonts/google_fonts.dart';
+import 'package:google_fonts/google_fonts.dart';
 ///to set background image or gradient in a screen
 class Splash_with_Image extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>LoginPage()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=>CustomScroll()));
     });
     return Scaffold(
       body: Container(

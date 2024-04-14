@@ -96,10 +96,7 @@ class ListView_seperated extends StatelessWidget {
           },
           separatorBuilder: (context, index) {
             if (index % 3 == 0) {
-              return Divider(
-                thickness: 2,
-                color: MyColors.buttonColors,
-              );
+              return Text('Fruits',style: MyTextThemes.textheadingg,);
             } else {
               return Container();
             }

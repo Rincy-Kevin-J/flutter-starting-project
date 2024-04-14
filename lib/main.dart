@@ -1,9 +1,5 @@
-import 'package:fltprojeect/screens/Sign_up.dart';
 import 'package:fltprojeect/screens/splash_page_with_background_imaage.dart';
-import 'package:fltprojeect/screens/welcome.dart';
 import 'package:flutter/material.dart';
-import 'package:fltprojeect/screens/splashPage.dart';
-import 'package:fltprojeect/screens/splash_page_with_background_imaage.dart';
 
 void main(){
   runApp(MyApp());
