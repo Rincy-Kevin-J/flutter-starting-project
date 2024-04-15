@@ -13,6 +13,7 @@ class GridView3 extends StatelessWidget {
         childAspectRatio: 1.5,
         children: List.generate(
             10,
+
                 (index) => Padding(
               padding: const EdgeInsets.all(15.0),
               child: Container(

@@ -33,6 +33,7 @@ class GridView2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hi"),
+
       ),
       body: GridView.builder(
           itemCount: 20,

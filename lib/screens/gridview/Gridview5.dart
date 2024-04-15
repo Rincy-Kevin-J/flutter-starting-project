@@ -50,6 +50,7 @@ class App extends StatelessWidget {
         style: TextStyle(color: Colors.white),),
       ),
       body: Padding(
+
         padding: const EdgeInsets.all(15.0),
         child: GridView(gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
         shrinkWrap: true,
