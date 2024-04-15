@@ -1,7 +1,10 @@
 import 'dart:async';
 
+import 'package:fltprojeect/screens/gridview/Gridview4.dart';
+import 'package:fltprojeect/screens/gridview/Gridview5.dart';
+import 'package:fltprojeect/screens/gridview/Gridviewcounter3.dart';
 import 'package:fltprojeect/screens/Slivers.dart';
-import 'package:fltprojeect/screens/gridview2.dart';
+import 'package:fltprojeect/screens/gridview/gridview2.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 ///to set background image or gradient in a screen
@@ -9,7 +12,7 @@ class Splash_with_Image extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
-      Navigator.push(context, MaterialPageRoute(builder: (context)=>CustomScroll()));
+      Navigator.push(context, MaterialPageRoute(builder: (context)=> GridView4()));
     });
     return Scaffold(
       body: Container(

@@ -5,7 +5,7 @@ import 'package:fltprojeect/screens/loginpage.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 ///to set background image or gradient in a screen
-class Splash_with_Image extends StatelessWidget {
+class SplashPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Timer(Duration(seconds: 3), () {
