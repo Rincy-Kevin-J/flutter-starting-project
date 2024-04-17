@@ -33,14 +33,13 @@ class GridView2 extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text("Hi"),
-
       ),
       body: GridView.builder(
           itemCount: 20,
-          gridDelegate:  SliverGridDelegateWithMaxCrossAxisExtent(
-              maxCrossAxisExtent: 110),
+          gridDelegate:
+              SliverGridDelegateWithMaxCrossAxisExtent(maxCrossAxisExtent: 110),
           itemBuilder: (context, index) {
-            return  Card(
+            return Card(
               child: ListTile(
                 leading: Icon(
                   Icons.person,

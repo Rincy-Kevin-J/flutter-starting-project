@@ -8,8 +8,7 @@ class GridView4 extends StatelessWidget {
         maxCrossAxisExtent: 50,
         children: List.generate(
           100,
-              (index) => Card(
-
+          (index) => Card(
             child: Icon(
               Icons.flare_outlined,
               size: 40,

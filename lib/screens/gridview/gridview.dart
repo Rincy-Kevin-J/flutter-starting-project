@@ -1,10 +1,10 @@
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: GridView1(),debugShowCheckedModeBanner: false,
+    home: GridView1(),
+    debugShowCheckedModeBanner: false,
   ));
 }
 
@@ -12,7 +12,6 @@ class GridView1 extends StatelessWidget {
   const GridView1({super.key});
 
   @override
-
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
