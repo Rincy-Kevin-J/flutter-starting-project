@@ -116,41 +116,41 @@ class ChatScreen extends StatelessWidget {
           backgroundColor: Color(0xff075E54),
           // backgroundColor:Colors.teal,
         ),
-        bottomNavigationBar: BottomNavigationBar(
-         selectedItemColor: Colors.black,
-          unselectedItemColor: Colors.black,
-          showUnselectedLabels: true,
-
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.chat,
-                  color: Colors.black,
-                ),
-                label: 'Chat'),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.update,
-                color: Colors.black,
-              ),
-              label: 'Updates',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.groups,
-                color: Colors.black,
-              ),
-              label: 'Communities',
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(
-                Icons.call,
-                color: Colors.black,
-              ),
-              label: 'Calls',
-            )
-          ],
-        ),
+        // bottomNavigationBar: BottomNavigationBar(
+        //  selectedItemColor: Colors.black,
+        //   unselectedItemColor: Colors.black,
+        //   showUnselectedLabels: true,
+        //
+        //   items: [
+        //     BottomNavigationBarItem(
+        //         icon: Icon(
+        //           Icons.chat,
+        //           color: Colors.black,
+        //         ),
+        //         label: 'Chat'),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(
+        //         Icons.update,
+        //         color: Colors.black,
+        //       ),
+        //       label: 'Updates',
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(
+        //         Icons.groups,
+        //         color: Colors.black,
+        //       ),
+        //       label: 'Communities',
+        //     ),
+        //     BottomNavigationBarItem(
+        //       icon: Icon(
+        //         Icons.call,
+        //         color: Colors.black,
+        //       ),
+        //       label: 'Calls',
+        //     )
+        //   ],
+        // ),
         body: Padding(
           padding: EdgeInsets.all(12.0),
           child: ListView(

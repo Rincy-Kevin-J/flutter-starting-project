@@ -90,42 +90,42 @@ class CallScreen extends StatelessWidget {
         ],
         backgroundColor: Colors.teal,
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        unselectedItemColor: Colors.black,
-        selectedItemColor: Colors.black,
-        showUnselectedLabels: true,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.chat,
-              color: Colors.black,
-            ),
-            label: 'Chat',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.update,
-              color: Colors.black,
-            ),
-            label: 'Updates',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.groups,
-              color: Colors.black,
-            ),
-            label: 'Communities',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.call,
-              color: Colors.black,
-            ),
-            label: 'Calls',
-          )
-        ],
-        backgroundColor: Color(0xff075E54),
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   unselectedItemColor: Colors.black,
+      //   selectedItemColor: Colors.black,
+      //   showUnselectedLabels: true,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.chat,
+      //         color: Colors.black,
+      //       ),
+      //       label: 'Chat',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.update,
+      //         color: Colors.black,
+      //       ),
+      //       label: 'Updates',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.groups,
+      //         color: Colors.black,
+      //       ),
+      //       label: 'Communities',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(
+      //         Icons.call,
+      //         color: Colors.black,
+      //       ),
+      //       label: 'Calls',
+      //     )
+      //   ],
+      //   backgroundColor: Color(0xff075E54),
+      // ),
       body: SingleChildScrollView(
         child: Column(
           children: [

@@ -12,6 +12,7 @@ class TabEx extends StatelessWidget {
     return DefaultTabController(
       length: 4,
       child: Scaffold(
+        // bottomNavigationBar:   ,
         appBar: AppBar(
           title: Text("WatsApp",),
           backgroundColor: Colors.teal[800],
