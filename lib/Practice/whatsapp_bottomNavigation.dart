@@ -1,3 +1,4 @@
+import 'package:fltprojeect/Practice/community.dart';
 import 'package:fltprojeect/Practice/watsapp_chat_screen.dart';
 import 'package:fltprojeect/Practice/watsappcall.dart';
 import 'package:flutter/material.dart';
@@ -15,9 +16,7 @@ class _BottomState extends State<BottomW> {
   List<Widget> screen = [
     ChatScreen(),
     GridView3(),
-    Center(
-      child: Text("hi"),
-    ),
+    Community(),
     CallScreen()
   ];
 

@@ -121,7 +121,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
               ),
             ],
             options: CarouselOptions(
-              height: 300,
+              height: 280,
               aspectRatio: 16 / 9,
               viewportFraction: 0.8,
               initialPage: 0,
@@ -139,7 +139,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
           Align(
             alignment: Alignment.bottomLeft,
             child: Padding(
-              padding: const EdgeInsets.only(left:20,bottom: 5 ),
+              padding: const EdgeInsets.only(left: 20, bottom: 5),
               child: Text(
                 "Recommended For You",
                 style: TextStyle(color: Colors.pinkAccent, fontSize: 20),

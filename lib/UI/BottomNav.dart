@@ -17,7 +17,6 @@ class _BottomNavBarState extends State<Bottom> {
   int index = 0;
   List<Widget> screens = [
     MusicPlayer(),
-    Home(),
     Search(),
     Playlist(),
     More(),
@@ -28,6 +27,9 @@ class _BottomNavBarState extends State<Bottom> {
     return Scaffold(
 
       bottomNavigationBar: BottomNavigationBar(
+        showUnselectedLabels: true,
+          unselectedItemColor: Colors.white,
+          selectedItemColor: Colors.white,
 
           currentIndex: index,
           type: BottomNavigationBarType.fixed,
