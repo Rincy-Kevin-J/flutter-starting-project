@@ -18,32 +18,27 @@ class _MusicPlayerState extends State<MusicPlayer> {
     {
       "song": "Hero",
       "artist": "Taylor Swift",
-      "pic":
-          "https://tse3.explicit.bing.net/th?id=OIP.li8e-oNdw8vSLpNG2IWU-wHaGZ&pid=Api&P=0&h=180"
+      "pic":"https://tse4.mm.bing.net/th?id=OIP.6Q0XSjCAsitGPvVQxovEDgAAAA&pid=Api&P=0&h=180",
     },
     {
       "song": "Unholy",
       "artist": "Sam Smith,Kim Petras",
-      "pic":
-          "https://tse4.mm.bing.net/th?id=OIP.RwpGwojbO0ezCo_QsyeLCwAAAA&pid=Api&P=0&h=180"
+      "pic":"https://tse4.mm.bing.net/th?id=OIP.RwpGwojbO0ezCo_QsyeLCwAAAA&pid=Api&P=0&h=180"
     },
     {
       "song": "Lift me up",
       "artist": "Rihanna",
-      "pic":
-          "https://tse4.explicit.bing.net/th?id=OIP.DHNYykmhjdK5KdwKzxQ7OgHaHa&pid=Api&P=0&h=180"
+      "pic":"https://tse4.explicit.bing.net/th?id=OIP.DHNYykmhjdK5KdwKzxQ7OgHaHa&pid=Api&P=0&h=180"
     },
     {
       "song": "Depression",
       "artist": "Dax",
-      "pic":
-          "https://tse3.mm.bing.net/th?id=OIP.impuKeM1IuyZC9aTz43onQHaHa&pid=Api&P=0&h=180"
+      "pic":"https://tse3.mm.bing.net/th?id=OIP.impuKeM1IuyZC9aTz43onQHaHa&pid=Api&P=0&h=180"
     },
     {
       "song": "I'm good",
       "artist": "David Guetta and Bebe Rexha",
-      "pic":
-          "https://tse3.mm.bing.net/th?id=OIP.3O5aUY6D3DQdWK1QMlPUEQHaHa&pid=Api&P=0&h=180"
+      "pic":"https://tse3.mm.bing.net/th?id=OIP.3O5aUY6D3DQdWK1QMlPUEQHaHa&pid=Api&P=0&h=180"
     },
   ];
 
@@ -75,8 +70,7 @@ class _MusicPlayerState extends State<MusicPlayer> {
                 decoration: BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.cover,
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG11c2ljfGVufDB8fDB8fHww")),
+                      image: NetworkImage("https://images.unsplash.com/photo-1487180144351-b8472da7d491?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fG11c2ljfGVufDB8fDB8fHww")),
                 ),
               ),
               Container(

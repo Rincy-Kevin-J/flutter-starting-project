@@ -2,6 +2,7 @@ import 'package:fltprojeect/utils/text-style.dart';
 import 'package:flutter/material.dart';
 
 class ProductTile extends StatelessWidget {
+  final String?name;
   final Color?color;
   final String?image;
   final String?title;
@@ -9,6 +10,7 @@ class ProductTile extends StatelessWidget {
   final int?price;
   final VoidCallback click;
   ProductTile({
+    this.name,
     this.color,
     this.image,
     this.title,
