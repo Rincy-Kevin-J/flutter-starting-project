@@ -18,19 +18,15 @@ class ShoeView extends StatelessWidget {
             width: 100,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(40),
-                image: DecorationImage(
-                    fit: BoxFit.fill, image: NetworkImage(imagepath ?? "")))),
+                image: DecorationImage(fit: BoxFit.fill, image: NetworkImage(imagepath ??"")))),
         Text(
-          title ?? "",
+          title??"",
           style: GoogleFonts.dekko(
               fontSize: 25, color: Colors.black, fontWeight: FontWeight.bold),
         ),
-        Text(
-          cat ?? "",
-          style: GoogleFonts.dekko(
+        Text(cat ?? "", style: GoogleFonts.dekko(
               fontSize: 20, color: Colors.black38, fontWeight: FontWeight.bold),
         ),
-
       ],
     );
   }
