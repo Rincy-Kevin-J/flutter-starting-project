@@ -2,7 +2,6 @@ import 'package:fltprojeect/screens/places/model/placehome.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-
 import '../../../../utils/text-style.dart';
 
 class PlaceDetails extends StatelessWidget {
