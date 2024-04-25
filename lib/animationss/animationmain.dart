@@ -1,6 +1,5 @@
-import 'package:fltprojeect/Practice/tabWatsapp.dart';
-import 'package:fltprojeect/Practice/whatsapp_bottomNavigation.dart';
-import 'package:fltprojeect/UI/BottomNav.dart';
+import 'package:fltprojeect/animationss/animation.dart';
+import 'package:fltprojeect/animationss/heroanimation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: TabEx(),
       debugShowCheckedModeBanner: false,
+      home: HeroMain(),
+      theme: ThemeData.dark(),
     );
   }
 }

@@ -54,7 +54,7 @@ class _SearchState extends State<Search> {
                 min: 0,
                 max: 100,
                 value: 50,
-                activeColor: Colors.green,
+                activeColor: Colors.pinkAccent,
                 onChanged: (value) {}),
 
             SizedBox(
