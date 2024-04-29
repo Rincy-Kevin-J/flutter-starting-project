@@ -1,5 +1,4 @@
-import 'package:fltprojeect/animationss/animation.dart';
-import 'package:fltprojeect/animationss/heroanimation.dart';
+import 'package:fltprojeect/screens/alertdialogur.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -11,8 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HeroMain(),
-      theme: ThemeData.dark(),
+      home: AlertDialogue(),
     );
   }
 }
