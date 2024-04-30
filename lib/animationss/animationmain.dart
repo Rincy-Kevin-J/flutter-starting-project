@@ -1,4 +1,5 @@
 import 'package:fltprojeect/screens/alertdialogur.dart';
+import 'package:fltprojeect/screens/pageviewbuilder.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: AlertDialogue(),
+      home: PageViewBuilderEx(),
     );
   }
 }
