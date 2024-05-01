@@ -16,7 +16,7 @@ class Reader extends StatelessWidget {
               mainAxisCellCount: 1.5,
               child: ProductTile(
                 color: Colors.grey,
-                image: "assets/images/img.png",
+                image: "assets/images/quiz.png",
                 title: "Mysteries of Universe",
                 desc: "20 June 2013\n Carl Sagan",
                 click: () {},

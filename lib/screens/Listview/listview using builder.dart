@@ -44,6 +44,23 @@ class ListView_builder extends StatelessWidget {
 
         /// toList()- since we need children property as list and the result of .map is map so we need to convert map to List
       ),
+      // body: ListView.builder(
+      //     itemCount: products.length,
+      //     itemBuilder: (context, index) {
+      //       return Card(
+      //         color: MyColors.basicColor,
+      //         child: ListTile(
+      //           leading: SizedBox(
+      //               height: 100,
+      //               width: 100,
+      //               child: Image.network(products[index].image!,
+      //                 fit: BoxFit.cover,)),
+      //           title: Text(products[index].name!),
+      //           subtitle: Text('${products[index].numdata!}'),
+      //           trailing: Icon(Icons.favorite_border),
+      //         ),
+      //       );
+      //     }),
     );
   }
 }

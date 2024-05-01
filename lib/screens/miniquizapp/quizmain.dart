@@ -1,3 +1,4 @@
+import 'package:fltprojeect/screens/miniquizapp/Quizlogin.dart';
 import 'package:fltprojeect/screens/miniquizapp/quizpage.dart';
 import 'package:flutter/material.dart';
 
@@ -7,8 +8,9 @@ class QuizMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Mini Quiz App"),),
-      body: const QuizPage(),
+      backgroundColor: Color(0xFF1E0342),
+      //appBar: AppBar(title: const Text("Mini Quiz App"),),
+      body: QuizPage(),
     );
   }
 }

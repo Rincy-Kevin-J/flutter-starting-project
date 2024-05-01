@@ -17,14 +17,14 @@ class _QuizPageState extends State<QuizPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
     userAnswer = List.filled(queAns.length, null);
     super.initState();
   }
 
   Widget build(BuildContext context) {
     return PageView.builder(
-        controller: PageController(),
+
+        controller: pageController,//edited
         itemCount: queAns.length,
         itemBuilder: (context, index) {
           return buildQuizPage(index);
@@ -39,7 +39,7 @@ class _QuizPageState extends State<QuizPage> {
         children: [
           Text(
             queAns[index]["question"],
-            style: MyTextThemes.textheadingg,
+            style:TextStyle(fontSize: 45,color: Colors.white),
           ),
           const SizedBox(
             height: 20,
@@ -57,7 +57,7 @@ class _QuizPageState extends State<QuizPage> {
                 });
               },
               child: RadioListTile<String>(
-                title: Text(option),
+                title: Text(option,style: TextStyle(fontSize: 30,color: Colors.white),),
                 value: option,
                 groupValue: userAnswer[index],
                 onChanged: (value) {
