@@ -1,9 +1,7 @@
 import 'dart:math';
 
-import 'package:flutter/cupertino.dart';
+import 'package:fltprojeect/Assignment/plantpage.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/text-style.dart';
 
 class PlantLogin extends StatelessWidget {
   var lists = [
@@ -97,39 +95,46 @@ class PlantLogin extends StatelessWidget {
                   itemBuilder: (context, index) => Card(
                       color: Colors
                           .primaries[Random().nextInt(Colors.primaries.length)],
-                      child: ListTile(
-                        leading: Container(
-                          // height: 200,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PlantPage(),
+                          ));
+                        },
+                        child: ListTile(
+                          leading: Container(
+                            // height: 200,
 
-                          child: Image.network("${lists[index]['pic']}"),
-                        ),
-                        // leading:  CircleAvatar(
-                        // backgroundColor: MyColors.iconColors,
-                        // backgroundImage: NetworkImage("${lists[index]['pic']}"
-                        //     ),
-                        // ),
-                        trailing: Icon(
-                          Icons.water_drop,
-                          color: Colors.white,
-                          // size: 50,
-                        ),
+                            child: Image.network("${lists[index]['pic']}"),
+                          ),
+                          // leading:  CircleAvatar(
+                          // backgroundColor: MyColors.iconColors,
+                          // backgroundImage: NetworkImage("${lists[index]['pic']}"
+                          //     ),
+                          // ),
+                          trailing: Icon(
+                            Icons.water_drop,
+                            color: Colors.white,
+                            // size: 50,
+                          ),
 
-                        title: Text(
-                          "${lists[index]['name']}",
-                        ),
-                        // style: GoogleFonts.abel(fontSize: 40)),
+                          title: Text(
+                            "${lists[index]['name']}",
+                          ),
+                          // style: GoogleFonts.abel(fontSize: 40)),
 
-                        subtitle: Row(
-                          children: [
-                            Icon(
-                              Icons.water_drop,
-                              color: Colors.white,
-                            ),
-                            Text(
-                              "${lists[index]['quantity']}",
-                              style: TextStyle(fontSize: 20),
-                            ),
-                          ],
+                          subtitle: Row(
+                            children: [
+                              Icon(
+                                Icons.water_drop,
+                                color: Colors.white,
+                              ),
+                              Text(
+                                "${lists[index]['quantity']}",
+                                style: TextStyle(fontSize: 20),
+                              ),
+                            ],
+                          ),
                         ),
                       ))
                   // return null;

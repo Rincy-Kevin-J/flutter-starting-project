@@ -1,3 +1,4 @@
+import 'package:fltprojeect/screens/MyMap.dart';
 import 'package:fltprojeect/screens/miniquizapp/Quizlogin.dart';
 import 'package:flutter/material.dart';
 
@@ -10,7 +11,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: QuizLogin(),
+      home: MapSample(),
     );
   }
 }
