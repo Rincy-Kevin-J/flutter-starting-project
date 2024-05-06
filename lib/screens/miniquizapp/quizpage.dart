@@ -100,7 +100,7 @@ class _QuizPageState extends State<QuizPage> {
         builder: (context) {
           return AlertDialog(
             title: const Text(
-              "Quiz Result",
+              "Congrats",
               style: TextStyle(
                   fontSize: 30,
                   color: Colors.green,

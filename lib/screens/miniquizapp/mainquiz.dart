@@ -1,5 +1,4 @@
-import 'package:fltprojeect/Assignment/assgn_plant.dart';
-import 'package:fltprojeect/Assignment/assgn_welcome.dart';
+import 'package:fltprojeect/screens/miniquizapp/Quizlogin.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -10,7 +9,7 @@ class MyApp extends StatelessWidget{
   @override
   Widget build(BuildContext context){
     return MaterialApp(
-      home: Welcome(),debugShowCheckedModeBanner: false,
+      home: QuizLogin(),debugShowCheckedModeBanner: false,
     );
   }
 }

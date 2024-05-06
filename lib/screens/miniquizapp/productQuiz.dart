@@ -92,59 +92,46 @@ List<Map<String, dynamic>> queAns = [
     ],
     "correctAnswer": "1994",
   },
-  {
-    "question": "In which country would you find the Great Wall?",
-    "options": [
-      "China",
-      "UnitedState",
-      "India",
-      "Japan"
-    ],
-    "correctAnswer": "China",
-  },
-  {
-    "question": "What is the capital city of Australia?",
-    "options": [
-      "Sydey",
-      "Melbourne",
-      "Canberra",
-      "Cairo"
-    ],
-    "correctAnswer": "Canberra",
-  },
-  {
-    "question": "In which Italian city is the famous Colosseum located?",
-    "options": [
-      "1994",
-      "1996",
-      "1995",
-      "1993"
-    ],
-    "correctAnswer": "1994",
-  },
-  {
-    "question": "When did Friends air for the first time?",
-    "options": [
-      "Rome",
-      "Venice",
-      "Millan",
-      "Collosium"
-    ],
-    "correctAnswer": "Rome",
-  },
-  {
-    "question": "What do we call a newly hatched butterfly?",
-    "options": [
-      "1. moth",
+  // {
+  //   "question": "In which country would you find the Great Wall?",
+  //   "options": [
+  //     "China",
+  //     "UnitedState",
+  //     "India",
+  //     "Japan"
+  //   ],
+  //   "correctAnswer": "China",
+  // },
+  // {
+  //   "question": "What is the capital city of Australia?",
+  //   "options": [
+  //     "Sydey",
+  //     "Melbourne",
+  //     "Canberra",
+  //     "Cairo"
+  //   ],
+  //   "correctAnswer": "Canberra",
+  // },
+  // {
+  //   "question": "In which Italian city is the famous Colosseum located?",
+  //   "options": [
+  //     "1994",
+  //     "1996",
+  //     "1995",
+  //     "1993"
+  //   ],
+  //   "correctAnswer": "1994",
+  // },
+  // {
+  //   "question": "When did Friends air for the first time?",
+  //   "options": [
+  //     "Rome",
+  //     "Venice",
+  //     "Millan",
+  //     "Collosium"
+  //   ],
+  //   "correctAnswer": "Rome",
+  // },
 
-     "2. A butter",
-
-     " 3. A caterpillar",
-
-      "4. A chrysalis"
-
-    ],
-    "correctAnswer": "1994",
-  },
 
 ];

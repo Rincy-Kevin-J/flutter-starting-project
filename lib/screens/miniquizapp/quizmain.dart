@@ -1,4 +1,3 @@
-import 'package:fltprojeect/screens/miniquizapp/Quizlogin.dart';
 import 'package:fltprojeect/screens/miniquizapp/quizpage.dart';
 import 'package:flutter/material.dart';
 

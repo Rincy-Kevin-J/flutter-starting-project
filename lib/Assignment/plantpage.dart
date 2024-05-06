@@ -17,9 +17,9 @@ class PlantPage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            height: 400,
+            height: 300,
             width: 500,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xFF8DECB4),
               image: DecorationImage(
                   image: NetworkImage(
@@ -29,10 +29,10 @@ class PlantPage extends StatelessWidget {
           Column(
             // mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              SizedBox(
+              const SizedBox(
                 height: 32,
               ),
-              Text(
+              const Text(
                 "Filodendro Atom",
                 style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
               ),
@@ -42,6 +42,7 @@ class PlantPage extends StatelessWidget {
                   childAspectRatio: 2.5,
                   mainAxisSpacing: 5,
                   crossAxisCount: 2,
+                  shrinkWrap: true,
                   children: List.generate(
                     4,
                     (index) => Row(
@@ -51,15 +52,44 @@ class PlantPage extends StatelessWidget {
                         Icon(
                           page[index]["icon"] as IconData?,
                           size: 50,
+                          color: Color(0xFF9CAFAA),
                         ),
-                        Text("${page[index]["name"]}"),
+                        Text(
+                          "${page[index]["name"]}",
+                          style:
+                              TextStyle(fontSize: 20, color: Color(0xFF9CAFAA)),
+                        ),
                       ],
                     ),
                   ),
-                  shrinkWrap: true,
+                ),
+              ),
+              const Padding(
+                padding: EdgeInsets.all(15.0),
+                child: Text(
+                  "The Filodendro 'Atom' is an elegant,\n ever-expanding interior evergreen,\n perfect for creating a beautiful green corner in the house thanks to the wonderful ornamental...",
+                  style: TextStyle(fontSize: 23, color: Color(0xFF3C5B6F)),
+                ),
+              ),
+              const Align(
+                  alignment: Alignment.topLeft,
+                  child: Padding(
+                    padding: EdgeInsets.only(left: 20),
+                    child: Text("Read more",
+                        style: TextStyle(
+                            color: Color(0xFF9AC8CD),
+                            fontWeight: FontWeight.bold,
+                            fontSize: 24)),
+                  )),
+              const CircleAvatar(
+                radius: 50,
+                backgroundColor: Color(0xFF9AC8CD),
+                child: Icon(
+                  Icons.water_drop,
+                  size: 50,
+                  color: Colors.white,
                 ),
               )
-
             ],
           ),
         ],
