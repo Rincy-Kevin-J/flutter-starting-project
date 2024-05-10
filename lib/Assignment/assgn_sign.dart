@@ -124,7 +124,7 @@ class _signUpPageState extends State<Signupassign> {
               RichText(
                 text: TextSpan(
                   text: 'Already have an account?',
-                  style: TextStyle(color: Colors.black),
+                  style: const TextStyle(color: Colors.black),
                   children: [
                     TextSpan(
                         recognizer: TapGestureRecognizer()
@@ -133,7 +133,7 @@ class _signUpPageState extends State<Signupassign> {
                                 builder: (context) => Loginsign()));
                           },
                         text: 'Login in',
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontSize: 22, fontWeight: FontWeight.bold))
                   ],
                 ),

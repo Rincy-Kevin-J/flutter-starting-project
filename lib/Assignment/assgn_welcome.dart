@@ -20,12 +20,12 @@ class Welcome extends StatelessWidget {
               fit: BoxFit.cover,
               colorFilter: ColorFilter.mode(
                   Colors.black.withOpacity(.7), BlendMode.dstATop),
-              image: NetworkImage(
+              image: const NetworkImage(
                   "https://images.unsplash.com/photo-1491147334573-44cbb4602074?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8f"))),
       child: SafeArea(
           child: Column(
         children: [
-          SizedBox(height: 50),
+          const SizedBox(height: 50),
           Text(
             "The best\n app for\n your plants ",
             textAlign: TextAlign.center,
@@ -45,11 +45,11 @@ class Welcome extends StatelessWidget {
             },
             color: Colors.white,
             minWidth: 200,
-            shape: StadiumBorder(),
+            shape: const StadiumBorder(),
             child: const Text("Sign Up",
                 style: TextStyle(fontSize: 20, color: Colors.green)),
           ),
-          SizedBox(
+          const SizedBox(
             height: 15,
           ),
           MaterialButton(
@@ -62,7 +62,7 @@ class Welcome extends StatelessWidget {
               },
               color: Colors.green,
               minWidth: 200,
-              shape: StadiumBorder(),
+              shape: const StadiumBorder(),
               child: const Text(
                 "Login",
                 style: TextStyle(fontSize: 20, color: Colors.white),

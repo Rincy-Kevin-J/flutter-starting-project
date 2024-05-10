@@ -31,16 +31,18 @@ class _LoginsignState extends State<Loginsign> {
           padding: EdgeInsets.all(3.0),
           child: Column(
             children: [
-              Container(
-                height: devHeight * .3,
-                width: devWidth,
-                decoration: const BoxDecoration(
-                  image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: NetworkImage(
-                          "https://images.unsplash.com/photo-1491147334573-44cbb4602074?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8f")),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(60),
+              Expanded(
+                child: Container(
+                  height: devHeight * .3,
+                  width: devWidth,
+                  decoration: const BoxDecoration(
+                    image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: NetworkImage(
+                            "https://images.unsplash.com/photo-1491147334573-44cbb4602074?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8f")),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(60),
+                    ),
                   ),
                 ),
               ),
