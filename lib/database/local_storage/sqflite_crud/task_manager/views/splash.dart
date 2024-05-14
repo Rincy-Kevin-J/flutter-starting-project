@@ -1,10 +1,6 @@
 import 'dart:async';
-
 import 'package:fltprojeect/database/local_storage/sqflite_crud/task_manager/views/task_home.dart';
-import 'package:fltprojeect/utils/mycolor.dart';
-import 'package:fltprojeect/utils/text-style.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:lottie/lottie.dart';
 
 class SplashEx extends StatelessWidget {
