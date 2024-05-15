@@ -1,6 +1,4 @@
 import 'package:fltprojeect/Practice/tabWatsapp.dart';
-import 'package:fltprojeect/Practice/whatsapp_bottomNavigation.dart';
-import 'package:fltprojeect/UI/BottomNav.dart';
 import 'package:flutter/material.dart';
 
 void main() {

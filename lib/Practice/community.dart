@@ -11,16 +11,16 @@ class _CommunityState extends State<Community> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Communities",
             style: TextStyle(fontSize: 25, color: Colors.black),
           ),
           actions: [Row(
             children: [
-              Icon(Icons.linked_camera_outlined),
+              const Icon(Icons.linked_camera_outlined),
               PopupMenuButton(itemBuilder: (context) {
                 return[
-                  PopupMenuItem(child: Text("Settings"))
+                  const PopupMenuItem(child: Text("Settings"))
                 ];
               },)
             ],
@@ -32,25 +32,25 @@ class _CommunityState extends State<Community> {
             child: Column(
               children: [
                 Container(
-                  child: Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.omf1qVK2iOVc1Uchy9V-_wAAAA&pid=Api&P=0&h=180")),
+                  child: const Image(image: NetworkImage("https://tse1.mm.bing.net/th?id=OIP.omf1qVK2iOVc1Uchy9V-_wAAAA&pid=Api&P=0&h=180")),
                   // decoration: BoxDecoration(
                   //     image: DecorationImage(
                   //         image: NetworkImage(
                   //             "https://tse1.mm.bing.net/th?id=OIP.omf1qVK2iOVc1Uchy9V-_wAAAA&pid=Api&P=0&h=180"))),
                 ),
-                Text(
+                const Text(
                   "Stay connected with a community",
                   style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
                 ),
-                Text(textAlign: TextAlign.center,
+                const Text(textAlign: TextAlign.center,
                   "Communities being in members together in topic-based groups, and make it easy to get admin announcements.,Any community you're added to will appear here",
                   style: TextStyle(fontSize: 15),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 15,
                 ),
                 Text("See Example Communities >",style: TextStyle(color: Colors.green[200]),),
-                SizedBox(
+                const SizedBox(
                   height: 25,
                 ),
                 MaterialButton(
@@ -60,8 +60,8 @@ class _CommunityState extends State<Community> {
                   },
                   color: Colors.green,
                   minWidth: 200,
-                  shape: StadiumBorder(),
-                  child: Text(
+                  shape: const StadiumBorder(),
+                  child: const Text(
                     "Start your community",
                     style: TextStyle( color: Colors.black),
                   ),

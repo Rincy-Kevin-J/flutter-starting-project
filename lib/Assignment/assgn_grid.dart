@@ -46,7 +46,7 @@ class AssgnGrid extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.black,
-          title: Text(
+          title: const Text(
             "Grid View",
             style: TextStyle(
               color: Colors.white,
@@ -71,7 +71,7 @@ class AssgnGrid extends StatelessWidget {
                         left: 10,
                         child: Text(
                           "${places[index]["name"]}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
                               fontSize: 25),

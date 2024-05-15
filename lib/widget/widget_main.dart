@@ -1,8 +1,5 @@
 import 'package:fltprojeect/Assignment/staggered_gridview.dart';
 import 'package:flutter/material.dart';
-
-import '../screens/gridview/stag_gridview2.dart';
-
 void main() {
   runApp(MyApp());
 }

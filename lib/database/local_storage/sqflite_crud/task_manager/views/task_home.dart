@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../../utils/mycolor.dart';
 import '../../../../../utils/text-style.dart';
 import '../../utils/snackbar.dart';
@@ -93,7 +92,9 @@ class _TaskHomeState extends State<TaskHome> {
                                   },
                                   icon: const Icon(Icons.edit)),
                               IconButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    deleteNote(task["id"]);
+                                  },
                                   icon: const Icon(Icons.delete))
                             ],
                           )
@@ -152,6 +153,12 @@ class _TaskHomeState extends State<TaskHome> {
                     color: MyColors.basicColor,
                     shape: const StadiumBorder(),
                     onPressed: () {
+                      if(id==null){
+                        createNote(context);
+                      }
+                      if(id !=null){
+                        updateNote(id,titleController.text,contentController.text);
+                      }
                       createNote(context);
                       titleController.clear();
                       contentController.clear();
@@ -174,5 +181,16 @@ class _TaskHomeState extends State<TaskHome> {
     } else {
       showErrorSnackBar(context);
     }
+  }
+
+ Future<void> updateNote(int id, String utitle, String ucontent) async {
+    await SQLHelper.update(id,utitle,ucontent);
+    readTask();
+
+  }
+
+  Future<void> deleteNote(int id) async {
+    await SQLHelper.deleteNote(id);
+    readTask();
   }
 }

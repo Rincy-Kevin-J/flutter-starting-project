@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget{
 class Medium extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Center(
         child: Image(image: AssetImage("assets/icons/medium.png")),
       ),

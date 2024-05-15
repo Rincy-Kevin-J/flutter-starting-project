@@ -42,7 +42,7 @@ class PlantLogin extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         // toolbarHeight: 110,
-        leading: Column(
+        leading: const Column(
           children: [
             Icon(
               Icons.settings,
@@ -52,7 +52,7 @@ class PlantLogin extends StatelessWidget {
         ),
         // title:
         // ),
-        actions: [
+        actions: const [
           Padding(
             padding: EdgeInsets.all(15.0),
             child: CircleAvatar(
@@ -74,7 +74,7 @@ class PlantLogin extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
-            Padding(
+            const Padding(
               padding: EdgeInsets.only(left: 15),
               child: Align(
                 alignment: Alignment.bottomLeft,
@@ -112,7 +112,7 @@ class PlantLogin extends StatelessWidget {
                           // backgroundImage: NetworkImage("${lists[index]['pic']}"
                           //     ),
                           // ),
-                          trailing: Icon(
+                          trailing: const Icon(
                             Icons.water_drop,
                             color: Colors.white,
                             // size: 50,
@@ -125,7 +125,7 @@ class PlantLogin extends StatelessWidget {
 
                           subtitle: Row(
                             children: [
-                              Icon(
+                              const Icon(
                                 Icons.water_drop,
                                 color: Colors.white,
                               ),
@@ -141,7 +141,7 @@ class PlantLogin extends StatelessWidget {
                   ,
                   separatorBuilder: (context, index) {
                     if ((index + 1) % 4 == 0) {
-                      return Text(
+                      return const Text(
                         'Fri,February 7',
                         style: TextStyle(fontSize: 30),
                       );

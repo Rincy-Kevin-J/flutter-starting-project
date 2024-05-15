@@ -73,7 +73,7 @@ class CallScreen extends StatelessWidget {
             children: [
               IconButton(
                   onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
-              SizedBox(
+              const SizedBox(
                 width: 15,
               ),
               IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined))
@@ -82,8 +82,8 @@ class CallScreen extends StatelessWidget {
           PopupMenuButton(
             itemBuilder: (context) {
               return [
-                PopupMenuItem(child: Text("Clear call log")),
-                PopupMenuItem(child: Text("Settings")),
+                const PopupMenuItem(child: Text("Clear call log")),
+                const PopupMenuItem(child: Text("Settings")),
               ];
             },
           )
@@ -129,7 +129,7 @@ class CallScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            ListTile(
+            const ListTile(
               title: Text(
                 "Create call link ",
                 style: TextStyle(fontWeight: FontWeight.w400, fontSize: 20),
@@ -143,48 +143,46 @@ class CallScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 16),
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
-            Padding(
+            const Padding(
               padding: EdgeInsets.all(12.0),
               child: Align(
+                alignment: Alignment.bottomLeft,
                 child: Text(
                   "Recent",
                   style: TextStyle(fontSize: 18),
                 ),
-                alignment: Alignment.bottomLeft,
               ),
             ),
             Padding(
-              padding: EdgeInsets.all(12),
-              child: Container(
-                child: ListView(
-                  physics: NeverScrollableScrollPhysics(),
-                  shrinkWrap: true,
-                  children: List.generate(
-                      calls.length,
-                      (index) => Card(
-                            color: Colors.white,
-                            child: ListTile(
-                              leading: CircleAvatar(
-                                backgroundColor: MyColors.iconColors,
-                                backgroundImage:
-                                    NetworkImage('${calls[index]['pic']}}'),
-                              ),
-                              trailing: Icon(Icons.call),
-                              title: Text(
-                                "${calls[index]['name']}",
-                                style: TextStyle(
-                                    fontWeight: FontWeight.bold, fontSize: 23),
-                              ),
-                              subtitle: Text(
-                                "${calls[index]['time']}",
-                                style: TextStyle(fontSize: 20),
-                              ),
+              padding: const EdgeInsets.all(12),
+              child: ListView(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                children: List.generate(
+                    calls.length,
+                    (index) => Card(
+                          color: Colors.white,
+                          child: ListTile(
+                            leading: CircleAvatar(
+                              backgroundColor: MyColors.iconColors,
+                              backgroundImage:
+                                  NetworkImage('${calls[index]['pic']}}'),
                             ),
-                          )),
-                ),
+                            trailing: const Icon(Icons.call),
+                            title: Text(
+                              "${calls[index]['name']}",
+                              style: const TextStyle(
+                                  fontWeight: FontWeight.bold, fontSize: 23),
+                            ),
+                            subtitle: Text(
+                              "${calls[index]['time']}",
+                              style: const TextStyle(fontSize: 20),
+                            ),
+                          ),
+                        )),
               ),
             )
           ],

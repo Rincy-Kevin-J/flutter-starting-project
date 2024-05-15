@@ -5,8 +5,8 @@ class SQLHelper {
   static Future<sql.Database> openOrCreateDb() async {
     return await sql.openDatabase('notes', version: 1,
         onCreate: (database, version) async {
-          await createTable(database);
-        });
+      await createTable(database);
+    });
   }
 
   //create Table
@@ -24,9 +24,20 @@ class SQLHelper {
   }
 
   //to read all the data from db in order of their id
-  static Future<List<Map<String,dynamic>>> readNote() async{
+  static Future<List<Map<String, dynamic>>> readNote() async {
     final db = await SQLHelper.openOrCreateDb();
-    return db.query("MyNotes",orderBy: 'id');
+    return db.query("MyNotes", orderBy: 'id');
   }
 
+  static Future<int> update(int id, String utitle, String ucontent) async {
+    final db = await SQLHelper.openOrCreateDb();
+    final udata = {"title": utitle, "content": ucontent};
+    final uid = db.update("MyNotes", udata, where: "id=?", whereArgs: [id]);
+    return uid;
+  }
+
+  static Future<void> deleteNote(int id) async {
+    final db = await SQLHelper.openOrCreateDb();
+    db.delete("MyNotes", where: "id=?", whereArgs: [id]);
+  }
 }

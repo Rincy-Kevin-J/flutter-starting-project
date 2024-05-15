@@ -12,12 +12,7 @@ class BottomW extends StatefulWidget {
 
 class _BottomState extends State<BottomW> {
   int index = 0;
-  List<Widget> screen = [
-    ChatScreen(),
-    Status(),
-    Community(),
-    CallScreen()
-  ];
+  List<Widget> screen = [ChatScreen(), Status(), Community(), CallScreen()];
 
   @override
   Widget build(BuildContext context) {
@@ -34,7 +29,7 @@ class _BottomState extends State<BottomW> {
             index = tappedindex;
           });
         },
-        items: [
+        items: const [
           BottomNavigationBarItem(
               icon: Icon(
                 Icons.chat,

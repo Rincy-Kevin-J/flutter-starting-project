@@ -90,7 +90,7 @@ class ChatScreen extends StatelessWidget {
               children: [
                 IconButton(
                     onPressed: () {}, icon: Icon(Icons.camera_alt_outlined)),
-                SizedBox(
+                const SizedBox(
                   width: 15,
                 ),
                 IconButton(onPressed: () {}, icon: Icon(Icons.search_outlined))
@@ -103,12 +103,12 @@ class ChatScreen extends StatelessWidget {
             PopupMenuButton(
               itemBuilder: (context) {
                 return [
-                  PopupMenuItem(child: Text("New group")),
+                  const PopupMenuItem(child: Text("New group")),
                   const PopupMenuItem(child: Text("New broadcast")),
-                  PopupMenuItem(child: Text("Linked device")),
-                  PopupMenuItem(child: Text("Started Device")),
-                  PopupMenuItem(child: Text("Payments")),
-                  PopupMenuItem(child: Text("Settings")),
+                  const PopupMenuItem(child: Text("Linked device")),
+                  const PopupMenuItem(child: Text("Started Device")),
+                  const PopupMenuItem(child: Text("Payments")),
+                  const PopupMenuItem(child: Text("Settings")),
                 ];
               },
             )
@@ -152,7 +152,7 @@ class ChatScreen extends StatelessWidget {
         //   ],
         // ),
         body: Padding(
-          padding: EdgeInsets.all(12.0),
+          padding: const EdgeInsets.all(12.0),
           child: ListView(
             children: List.generate(
                 users.length,
@@ -166,7 +166,7 @@ class ChatScreen extends StatelessWidget {
                       trailing: _buildWidget(index),
                       title: Text(
                         "${users[index]['name']}",
-                        style: TextStyle(
+                        style: const TextStyle(
                             fontWeight: FontWeight.bold, fontSize: 23),
                       ),
                       subtitle: Text(
@@ -192,7 +192,7 @@ class ChatScreen extends StatelessWidget {
             backgroundColor: Colors.green,
             child: Text(
               "${users[index]['unread']}",
-              style: TextStyle(
+              style: const TextStyle(
                 color: Colors.black,
               ),
             ),

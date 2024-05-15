@@ -20,7 +20,7 @@ class Spotify  extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-    return Scaffold(
+    return const Scaffold(
      backgroundColor: Colors.black, 
       body: Center(
         child: Image(image: NetworkImage("https://cdn-icons-png.flaticon.com/128/2111/2111624.png")),

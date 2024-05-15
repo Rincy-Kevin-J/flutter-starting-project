@@ -5,8 +5,6 @@ import 'package:fltprojeect/screens/gridview/Gridviewcounter3.dart';
 import 'package:flutter/material.dart';
 
 class TabEx extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
@@ -14,15 +12,20 @@ class TabEx extends StatelessWidget {
       child: Scaffold(
         // bottomNavigationBar:   ,
         appBar: AppBar(
-          title: Text("WatsApp",),
+          title: const Text(
+            "WatsApp",
+          ),
           backgroundColor: Colors.teal[800],
-          bottom: TabBar(tabs: [
-            Icon(Icons.people_outline,color: Colors.white,size: 20,),
+          bottom: const TabBar(tabs: [
+            Icon(
+              Icons.people_outline,
+              color: Colors.white,
+              size: 20,
+            ),
             Text("Chat"),
             Text("Status"),
             Text("Call")
-          ]
-         ),
+          ]),
         ),
         body: TabBarView(children: [
           ChatScreen(),

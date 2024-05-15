@@ -15,45 +15,40 @@ class _FirstState extends State<Firstlearn> {
     {
       "Institute": "Luminar",
       "pic": "assets/images/Brototype.png",
-      "Navigation": Luminar()
+      "Navigation": const Luminar()
     },
     {
       "Institute": "Luminar",
       "pic": "assets/images/Luminar.png",
-      "Navigation":Luminar()
-
+      "Navigation": const Luminar()
     },
     {
       "Institute": "Luminar",
       "pic": "assets/images/StackUp.png",
-      "Navigation":Luminar()
-
+      "Navigation": const Luminar()
     },
     {
       "Institute": "Luminar",
       "pic": "assets/images/Brototype.png",
-      "Navigation":Luminar()
-
+      "Navigation": const Luminar()
     },
     {
       "Institute": "Luminar",
       "pic": "assets/images/Brototype.png",
-      "Navigation":Luminar()
-
+      "Navigation": const Luminar()
     },
   ];
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.black,
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Find Your Favourite Courses",
             style: TextStyle(fontSize: 25, color: Color(0xFF6C22A6)),
           ),
-          actions: [
+          actions: const [
             Row(
               children: [
                 Icon(
@@ -68,8 +63,8 @@ class _FirstState extends State<Firstlearn> {
             padding: const EdgeInsets.all(15.0),
             child: SingleChildScrollView(
               child: Column(children: [
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
+                const Padding(
+                  padding: EdgeInsets.all(10.0),
                   child: Align(
                       alignment: Alignment.topLeft,
                       child: Text(
@@ -80,8 +75,8 @@ class _FirstState extends State<Firstlearn> {
                 ),
                 Container(
                   alignment: Alignment.topLeft,
-                  child: Padding(
-                    padding: const EdgeInsets.only(left: 20, bottom: 5),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 20, bottom: 5),
                     child: Text("Offers",
                         style: TextStyle(color: Colors.purple, fontSize: 20)),
                   ),
@@ -115,22 +110,23 @@ class _FirstState extends State<Firstlearn> {
                     enableInfiniteScroll: true,
                     reverse: false,
                     autoPlay: true,
-                    autoPlayInterval: Duration(seconds: 3),
-                    autoPlayAnimationDuration: Duration(milliseconds: 800),
+                    autoPlayInterval: const Duration(seconds: 3),
+                    autoPlayAnimationDuration: const Duration(milliseconds: 800),
                     autoPlayCurve: Curves.fastOutSlowIn,
                     enlargeCenterPage: true,
                     enlargeFactor: 0.3,
                     scrollDirection: Axis.horizontal,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 GridView(
-                    physics: NeverScrollableScrollPhysics(),
-                    padding: EdgeInsets.all(10),
-                    gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                        crossAxisCount: 2),
+                    physics: const NeverScrollableScrollPhysics(),
+                    padding: const EdgeInsets.all(10),
+                    gridDelegate:
+                        const SliverGridDelegateWithFixedCrossAxisCount(
+                            crossAxisCount: 2),
                     shrinkWrap: true,
                     children: List.generate(
                       5,
@@ -138,7 +134,8 @@ class _FirstState extends State<Firstlearn> {
                         padding: const EdgeInsets.all(3.0),
                         child: InkWell(
                           onTap: () {
-                            Navigator.of(context).push(MaterialPageRoute(builder: (context)=> Luminar()));
+                            Navigator.of(context).push(MaterialPageRoute(
+                                builder: (context) => const Luminar()));
 
                             // Navigator.of(context).push(MaterialPageRoute(
                             //     builder: (context) => );
@@ -151,11 +148,11 @@ class _FirstState extends State<Firstlearn> {
                                         Image.asset("${learn[index]["pic"]}")),
                                 Text(
                                   "${learn[index]["Institute"]}",
-                                  style: TextStyle(
+                                  style: const TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 20),
                                 ),
-                                Icon(CupertinoIcons.heart)
+                                const Icon(CupertinoIcons.heart)
                               ],
                             ),
                           ),

@@ -38,7 +38,7 @@ class PlantPage extends StatelessWidget {
                 // height: 50,
                 // decoration: ShapeDecoration(shape: StadiumBorder()),
 
-                child: Center(
+                child: const Center(
                   child: Text(
                     "Filodendro Atom",
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),

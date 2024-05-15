@@ -60,18 +60,18 @@ class _StatusState extends State<Status> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text(
+          title: const Text(
             "Updates",
             style: TextStyle(fontSize: 25, color: Colors.black),
           ),
           actions: [
             Row(
               children: [
-                Icon(Icons.camera_alt_outlined),
-                Icon(Icons.search_outlined),
+                const Icon(Icons.camera_alt_outlined),
+                const Icon(Icons.search_outlined),
                 PopupMenuButton(
                   itemBuilder: (context) {
-                    return [PopupMenuItem(child: Text("Settings"))];
+                    return [const PopupMenuItem(child: Text("Settings"))];
                   },
                 )
               ],
@@ -81,7 +81,7 @@ class _StatusState extends State<Status> {
         body: Column(children: [
           Row(
             children: [
-              Text(
+              const Text(
                 "Status",
                 style: TextStyle(color: Colors.black, fontSize: 20),
               ),
@@ -92,15 +92,15 @@ class _StatusState extends State<Status> {
               )
             ],
           ),
-          CircleAvatar(
+          const CircleAvatar(
             child: Image(image: NetworkImage("https://tse4.mm.bing.net/th?id=OIP.tD1MGBJC9FLrjeXFHshPCwHaHa&pid=Api&P=0&h=180")),
 
           ),
-          Text("My Status",style: TextStyle(fontSize: 20,color: Colors.black),),
+          const Text("My Status",style: TextStyle(fontSize: 20,color: Colors.black),),
           SizedBox(
             height: 15,
           ),
-          Text("Tap to add whatsapp update"),
+          const Text("Tap to add whatsapp update"),
 
           ListView(
             children: List.generate(
@@ -114,7 +114,7 @@ class _StatusState extends State<Status> {
                         ),
                         title: Text(
                           "${dp[index]['name']}",
-                          style: TextStyle(
+                          style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 23),
                         ),
 
