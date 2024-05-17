@@ -1,7 +1,5 @@
 import 'package:fltprojeect/statemanagement/using_multiproviders/controller/count_controller.dart';
 import 'package:fltprojeect/statemanagement/using_multiproviders/view/multiprovider.dart';
-import 'package:fltprojeect/statemanagement/using_provider/controller/count_controller.dart';
-import 'package:fltprojeect/statemanagement/using_provider/view/counter_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
