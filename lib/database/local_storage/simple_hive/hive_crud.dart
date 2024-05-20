@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 
@@ -36,31 +35,52 @@ class _ContactHiveState extends State<ContactHive> {
         ),
         body: contacts.isEmpty
             ? Center(
-          child: Text(
-            "No Contacts",
-            style: MyTextThemes.textheadingg,
-          ),
-        )
-            : ListView.builder(
-            itemCount: contacts.length,
-            itemBuilder: (context, index) {
-              final contact = contacts[index];
-              return Card(
-                child: ListTile(
-                  leading: const CircleAvatar(
-                    child: Icon(Icons.person),
-                  ),
-                  title: Text(
-                    contact['name'],
-                    style: MyTextThemes.bodyTextStyle,
-                  ),
-                  subtitle: Text(contact['number']),
+                child: Text(
+                  "No Contacts",
+                  style: MyTextThemes.textheadingg,
                 ),
-              );
-            }));
+              )
+            : ListView.builder(
+                itemCount: contacts.length,
+                itemBuilder: (context, index) {
+                  final contact = contacts[index];
+                  return Card(
+                    child: ListTile(
+                      leading: const CircleAvatar(
+                        child: Icon(Icons.person),
+                      ),
+                      title: Text(
+                        contact['name'],
+                        style: MyTextThemes.bodyTextStyle,
+                      ),
+                      subtitle: Text(contact['number']),
+                      trailing: Wrap(
+                        children: [
+                          IconButton(
+                              onPressed: () {
+                                showContactBox(contact['key']);
+                              },
+                              icon: Icon(Icons.edit)),
+                          IconButton(
+                              onPressed: () {
+                                //box.delete(contact['key']);
+                                deleteContact(contact['key']);
+                              },
+                              icon: Icon(Icons.delete))
+                        ],
+                      ),
+                    ),
+                  );
+                }));
   }
 
   void showContactBox(int? key) {
+    if (key != null) {
+      final savedContact =
+          contacts.firstWhere((element) => element["key"] == key);
+      nameController.text = savedContact['name'];
+      phoneController.text = savedContact['number'];
+    }
     // similar to id in sqflite
     showDialog(
         context: context,
@@ -95,6 +115,12 @@ class _ContactHiveState extends State<ContactHive> {
                   String number = phoneController.text;
                   if (key == null) {
                     createContact({'contactName': name, 'phoneNumber': number});
+                  }
+                  if (key != null) {
+                    updateContact(key, {
+                      'contactName': nameController.text,
+                      "phoneNumber": phoneController.text
+                    });
                   }
                   nameController.clear();
                   phoneController.clear();
@@ -133,148 +159,16 @@ class _ContactHiveState extends State<ContactHive> {
       contacts = contact_from_hive.reversed.toList();
     });
   }
-}
 
-
-/*
-import 'package:fltprojeect/utils/text-style.dart';
-import 'package:flutter/material.dart';
-import 'package:hive/hive.dart';
-
-class ContactHive extends StatefulWidget {
-
-  @override
-  State<ContactHive> createState() => _ContactHiveState();
-}
-
-class _ContactHiveState extends State<ContactHive> {
-  final nameController = TextEditingController();
-  final phoneController = TextEditingController();
-  var box = Hive.box("contactBook");
-  List<Map<String, dynamic>>contacts = [];
-
-  @override
-  void initState() {
-    refresh_or_read_contacts();
-    super.initState();
+  void updateContact(int key, Map<String, String> updateContact) {
+    box.put(key, updateContact);
+    refresh_or_read_contact();
   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("My Contacts"),
-        actions: [
-          IconButton(onPressed: () {
-            showContactBox(null);
-          }, icon: Icon(Icons.person_add))
-        ],
-      ),
-     body: contacts.isEmpty
-      ?Center(
-       child: Text("No Contacts",
-       style: MyTextThemes.textheadingg,
-       ),
-     )
-         :ListView.builder(
-         itemCount: contacts.length,
-         itemBuilder: (context,index){
-           final contact=contacts[index];
-           return Card(
-            child: ListTile(
-              leading: CircleAvatar(
-                child: Icon(Icons.person),
-              ),
-              title: Text(
-                contact["name"],
-                style: MyTextThemes.bodyTextStyle,
-              ),
-              subtitle: Text(contact['number']),
-            ),
-           );
-         })
-
-    );
-  }
-
-  void showContactBox(int ? key) {
-    // similar to id in sqflite
-    showDialog(
-        context: context,
-        builder: (context)
-    {
-      return AlertDialog(
-        title: Text(key == null ? "Create Contact" : "Update Contact"),
-        content: Padding(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              TextField(
-                controller: nameController,
-                decoration: InputDecoration(
-                  hintText: "Name",
-                  border: OutlineInputBorder(),
-                ),
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TextField(
-                controller: phoneController,
-                decoration: InputDecoration(
-                  hintText: "Phone Number",
-                  border: OutlineInputBorder(),
-                ),
-              )
-            ],
-
-          ),
-        ),
-        actions: [
-          TextButton(onPressed: () {
-            String name = nameController.text;
-            String number = phoneController.text;
-            if (key == null) {
-              createContact({"contactName": name, "phoneNumber": number});
-            }
-            nameController.clear();
-            phoneController.clear();
-            Navigator.pop(context);
-          }, child: Text(key == null ? "Create Contact" :
-          "Update Contact")),
-          TextButton(onPressed: () {
-            Navigator.pop(context);
-          },
-              child: Text("Cancel"),
-          )
-        ],
-      );
-    }
-    );
-  }
-
-  void createContact(Map<String, String> contact) {
-    box.add(contact);
-    refresh_or_read_contacts(); // update list after adding a new contact
-  }
-
-    void refresh_or_read_contacts() {
-    final contact_from_hive = box.keys.map((e) {
-      //fetch all the keys from hive box in ascending order
-      //and add each map to single contact
-      final singleContact = box.get(e);
-      return {
-        "key": e,
-        "name": singleContact["contactName"],
-        "number": singleContact["contactNumber"]
-      };
-    }
-    ).toList();
-    setState(() {
-      contacts = contact_from_hive.reversed.toList();
-    });
+  void deleteContact(contact) {
+    box.delete(contact);
+    refresh_or_read_contact();
   }
 }
 
- */
+
