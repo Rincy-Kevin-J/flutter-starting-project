@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
-
 import '../../../utils/text-style.dart';
 
 class ContactHive extends StatefulWidget {
@@ -170,5 +169,3 @@ class _ContactHiveState extends State<ContactHive> {
     refresh_or_read_contact();
   }
 }
-
-

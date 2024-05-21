@@ -1,0 +1,12 @@
+import 'package:hive/hive.dart';
+
+import '../model/users.dart';
+
+
+class HiveDB {
+
+  static Future<List<Users>> getAllUsers() async {
+    final db = await Hive.openBox<Users>('userdata');
+    return db.values.toList();
+  }
+}
