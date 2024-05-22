@@ -4,9 +4,6 @@ import 'package:fltprojeect/UI/Search.dart';
 import 'package:fltprojeect/UI/musicplayer1.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import '../utils/mycolor.dart';
-
 class Bottom extends StatefulWidget {
   @override
   State<Bottom> createState() => _BottomNavBarState();
@@ -39,7 +36,6 @@ class _BottomNavBarState extends State<Bottom> {
             });
           },
           items: [
-
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.search_outlined), label: "Search"),
@@ -47,7 +43,8 @@ class _BottomNavBarState extends State<Bottom> {
                 icon: Icon(Icons.playlist_add), label: "Playlist"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.more_horiz), label: "More"),
-          ]),
+          ]
+      ),
       body: screens[index],
     );
   }

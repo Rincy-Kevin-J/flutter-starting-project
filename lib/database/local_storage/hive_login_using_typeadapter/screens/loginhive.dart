@@ -1,7 +1,11 @@
-
+import 'package:fltprojeect/database/local_storage/hive_login_using_typeadapter/db/hivedb.dart';
+import 'package:fltprojeect/database/local_storage/hive_login_using_typeadapter/model/users.dart';
 import 'package:fltprojeect/database/local_storage/hive_login_using_typeadapter/screens/registrationhive.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../../../utils/text-style.dart';
+import 'homehive.dart';
 
 class HiveLogin extends StatefulWidget {
   @override
@@ -17,6 +21,7 @@ class _HiveLoginState extends State<HiveLogin> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Colors.green,
         title: Text(
           "Login Page",
@@ -50,9 +55,14 @@ class _HiveLoginState extends State<HiveLogin> {
             const SizedBox(
               height: 10,
             ),
-            ElevatedButton(onPressed: () {}, child: const Text("Login Here!!")),
+            ElevatedButton(onPressed: () async{
+              final users=await HiveDB.getAllUsers();
+              validateLogin(users);
+            }, child: const Text("Login Here!!")),
             TextButton(
                 onPressed: () {
+
+                  Get.to(HiveRegister());
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => HiveRegister()));
                 },
@@ -62,4 +72,25 @@ class _HiveLoginState extends State<HiveLogin> {
       ),
     );
   }
+
+  void validateLogin(List<Users> users) async{
+    final email=emailController.text;
+    final pass=passController.text;
+    if(email !="" && pass!=""){
+      await Future.forEach(users, (singleUsers) {
+        if(email== singleUsers.email&& pass==singleUsers.password){
+          final name=singleUsers.name;
+          Get.offAll(HiveHome(name));
+          Get.snackbar("success", "Login Success",
+          backgroundColor: Colors.green,colorText: Colors.white);
+        }
+        else{
+          Get.snackbar("Error", "Login Failed",
+          backgroundColor: Colors.red,colorText: Colors.white);
+        }
+      }
+      );
+    }
+  }
 }
+

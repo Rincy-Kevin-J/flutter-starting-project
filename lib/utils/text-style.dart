@@ -8,7 +8,7 @@ import 'mycolor.dart';
 
 class MyTextThemes{
   static TextStyle textheadingg= GoogleFonts.merriweather(
-    fontSize:50,
+    fontSize:40,
     color:MyColors.textColors,
     fontWeight:FontWeight.bold,
 

@@ -1,5 +1,6 @@
 
 import 'package:email_validator/email_validator.dart';
+import 'package:fltprojeect/database/local_storage/hive_login_using_typeadapter/screens/loginhive.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -97,16 +98,24 @@ class _HiveRegisterState extends State<HiveRegister> {
           Get.snackbar("Warning!!", "User Already Exist");
         }else{
           if(pass.length < 6){
-            Get.snackbar("Error", 'Password Length must be >= 6');
+            Get.snackbar("Error", 'Password Length must be >= 6',
+            backgroundColor: Colors.red,colorText: Colors.white);
           }else{
-
+           final user=Users(name: name, email: email, password: pass);
+           await HiveDB.addUser(user);
+           Get.snackbar("Success", "User Registration Success",
+           backgroundColor: Colors.green,colorText: Colors.white);
+           Get.to(HiveLogin());
           }
         }
       }else{
-        Get.snackbar("Failed!!", "Please enter a Valid Email..");
+        Get.snackbar("Failed!!", "Please enter a Valid Email..",
+        backgroundColor: Colors.red,colorText: Colors.white
+        );
       }
     } else {
-      Get.snackbar("Warning!!", "Fields Must Not be Empty..");
+      Get.snackbar("Warning!!", "Fields Must Not be Empty..",
+      backgroundColor: Colors.red,colorText: Colors.white);
     }
   }
 }

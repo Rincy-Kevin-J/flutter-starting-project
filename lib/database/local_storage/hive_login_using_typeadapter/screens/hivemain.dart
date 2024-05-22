@@ -17,7 +17,7 @@ class MyHive extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      home:HiveLogin(),
+      home:HiveLogin(),debugShowCheckedModeBanner: false,
     );
   }
 
