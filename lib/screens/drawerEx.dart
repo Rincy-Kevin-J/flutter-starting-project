@@ -1,8 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import '../Practice/watsappcall.dart';
-
 class Drawe extends StatelessWidget {
   var users = [
     {"name": "Add Leads", "icon": Icons.draw},
@@ -15,7 +13,6 @@ class Drawe extends StatelessWidget {
     {"name": "Contact Us", "icon": Icons.call},
     {"name": "About App", "icon": Icons.settings},
   ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

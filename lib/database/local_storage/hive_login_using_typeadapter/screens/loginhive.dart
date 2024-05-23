@@ -72,7 +72,6 @@ class _HiveLoginState extends State<HiveLogin> {
       ),
     );
   }
-
   void validateLogin(List<Users> users) async{
     final email=emailController.text;
     final pass=passController.text;

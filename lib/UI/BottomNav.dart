@@ -8,7 +8,6 @@ class Bottom extends StatefulWidget {
   @override
   State<Bottom> createState() => _BottomNavBarState();
 }
-
 class _BottomNavBarState extends State<Bottom> {
   int index = 0;
   List<Widget> screens = [
@@ -21,7 +20,6 @@ class _BottomNavBarState extends State<Bottom> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       bottomNavigationBar: BottomNavigationBar(
         showUnselectedLabels: true,
           unselectedItemColor: Colors.white,
