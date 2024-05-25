@@ -14,7 +14,6 @@ class HiveLogin extends StatefulWidget {
 
 class _HiveLoginState extends State<HiveLogin> {
   final emailController = TextEditingController();
-
   final passController = TextEditingController();
 
   @override
