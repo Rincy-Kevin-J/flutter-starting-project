@@ -52,7 +52,6 @@ class RegFire extends StatelessWidget {
   void registerUser() {
     String email = emailController.text.trim();
     String pass = passController.text.trim();
-
     FirebaseFunctions()
         .signUpUser(email: email, pwd: pass)
         .then((response) {
