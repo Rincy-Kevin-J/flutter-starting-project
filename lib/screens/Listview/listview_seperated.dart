@@ -95,6 +95,7 @@ class ListView_seperated extends StatelessWidget {
             );
           },
           separatorBuilder: (context, index) {
+
             if (index % 3 == 0) {
               return Text('Fruits',style: MyTextThemes.textheadingg,);
             } else {

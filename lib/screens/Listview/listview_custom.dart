@@ -6,6 +6,7 @@ class Custom_Listview extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+
       // body: ListView.custom(childrenDelegate: SliverChildBuilderDelegate((context, index) => Card())),
       // body: ListView.custom(childrenDelegate: SliverChildListDelegate([Card(), Card(), ...])),
       body: ListView.custom(childrenDelegate: SliverChildBuilderDelegate((context, index) => const Card(
