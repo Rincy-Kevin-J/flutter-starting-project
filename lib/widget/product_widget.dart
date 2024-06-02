@@ -21,7 +21,6 @@ class ProductTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return Card(
       elevation: 6,
       shadowColor: Colors.lightBlue,
