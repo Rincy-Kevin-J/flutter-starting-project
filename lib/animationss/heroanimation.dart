@@ -19,7 +19,6 @@ class HeroMain extends StatelessWidget {
                 );
               },
               tag: 'heroanim',
-
               child: Container(
                 height: 200,
                 width: 200,
