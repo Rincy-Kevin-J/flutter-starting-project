@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  final String? userId;
-
-  HomeScreen({required this.userId});
+class homePage extends StatefulWidget {
+  const homePage({super.key});
 
   @override
+  State<homePage> createState() => _homePageState();
+}
+
+class _homePageState extends State<homePage> {
+  @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return  Scaffold(
       appBar: AppBar(
-        title: Text('Home Screen'),
-      ),
-      body: Center(
-        child: Text('Welcome, User ID: $userId'),
+        title: Text("Home "),
       ),
     );
   }
