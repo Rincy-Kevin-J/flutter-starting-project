@@ -16,10 +16,8 @@ class _WebViewExState extends State<WebViewEx> {
     controller = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted)
       ..loadRequest(Uri.parse("https://pub.dev/packages/webview_flutter"));
-    // TODO: implement initState
-    super.initState();
+      super.initState();
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

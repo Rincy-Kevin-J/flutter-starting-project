@@ -42,11 +42,11 @@ class Main_Animation extends StatelessWidget {
                         transitionsBuilder:
                             (context, animation1, animation2, child) {
                           return ScaleTransition(
-                            //scale: animation1,
+                              //scale: animation1,
                               scale: Tween<double>(begin: 0.6, end: 1.0)
                                   .animate(CurvedAnimation(
-                                  parent: animation1,
-                                  curve: Curves.fastLinearToSlowEaseIn)),
+                                      parent: animation1,
+                                      curve: Curves.fastLinearToSlowEaseIn)),
                               child: child);
                         },
                         transitionDuration: const Duration(milliseconds: 800),

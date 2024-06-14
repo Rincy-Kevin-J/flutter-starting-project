@@ -15,8 +15,7 @@ class _AnimationExState extends State<AnimationEx>
   @override
   void initState() {
     animationController =
-        AnimationController(vsync: this, duration: const Duration(
-            seconds: 1));
+        AnimationController(vsync: this, duration: const Duration(seconds: 1));
     // animation = Tween<double>(begin: 0.0, end: 1.0).animate(animationController);
     animation =
         Tween<double>(begin: 0, end: 2 * 3.14).animate(animationController);

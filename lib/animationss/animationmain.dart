@@ -1,5 +1,4 @@
 import 'package:fltprojeect/screens/MyMap.dart';
-import 'package:fltprojeect/screens/miniquizapp/Quizlogin.dart';
 import 'package:flutter/material.dart';
 
 void main() {
